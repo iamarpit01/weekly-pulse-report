@@ -1,0 +1,7 @@
+mcp
+google-play-scraper
+sentence-transformers
+umap-learn
+hdbscan
+openai
+python-dotenv

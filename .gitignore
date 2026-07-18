@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+credentials.json
+service_account.json
+token.pickle
+__pycache__/
+*.pyc
+scratch/
+client_secret_*.json

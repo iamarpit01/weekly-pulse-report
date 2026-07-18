@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pulse Insight Engine - Component Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e9ddff",
+                        "on-tertiary-container": "#006d4a",
+                        "on-surface-variant": "#b9cacb",
+                        "on-error": "#690005",
+                        "surface": "#0b1326",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "on-secondary-fixed": "#23005c",
+                        "surface-container-lowest": "#060e20",
+                        "surface-bright": "#31394d",
+                        "on-primary-fixed": "#002022",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#7df4ff",
+                        "outline-variant": "#3b494b",
+                        "error": "#ffb4ab",
+                        "on-primary": "#00363a",
+                        "tertiary-container": "#65f2b5",
+                        "surface-container-low": "#131b2e",
+                        "tertiary": "#d8ffe7",
+                        "surface-container-high": "#222a3d",
+                        "primary-fixed-dim": "#00dbe9",
+                        "primary": "#00f0ff",
+                        "on-primary-container": "#006970",
+                        "surface-tint": "#00f0ff",
+                        "on-secondary": "#3c0091",
+                        "inverse-surface": "#dae2fd",
+                        "secondary": "#d0bcff",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary": "#003824",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-background": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dae2fd",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-secondary-container": "#c4abff",
+                        "surface-container-highest": "#2d3449",
+                        "surface-dim": "#0b1326",
+                        "secondary-container": "#571bc1",
+                        "on-primary-fixed-variant": "#004f54",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "primary-container": "#00f0ff",
+                        "background": "#0b1326",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "outline": "#849495",
+                        "inverse-primary": "#006970"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "64px",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "md": "24px",
+                        "margin-desktop": "32px",
+                        "xs": "8px",
+                        "gutter": "20px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(34, 42, 61, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.02);
+        }
+        .glass-panel:hover {
+            background: rgba(34, 42, 61, 0.5);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.05), 0 0 15px rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-panel-active {
+             background: rgba(34, 42, 61, 0.6);
+            border: 1px solid rgba(0, 240, 255, 0.6);
+            box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.1), 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+        
+        /* Neon chart elements */
+        .neon-line-cyan {
+            stroke: #00f0ff;
+            stroke-width: 2;
+            filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8));
+        }
+        .neon-area-cyan {
+            fill: url(#cyan-gradient);
+        }
+        .neon-bar-violet {
+            fill: rgba(208, 188, 255, 0.8);
+            filter: drop-shadow(0 0 4px rgba(208, 188, 255, 0.6));
+        }
+        .neon-bar-violet:hover {
+             fill: rgba(208, 188, 255, 1);
+            filter: drop-shadow(0 0 8px rgba(208, 188, 255, 0.9));
+        }
+        
+        .pulse-dot {
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 240, 255, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+        }
+
+        /* Ambient background glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.05) 0%, transparent 70%),
+                        radial-gradient(circle at 100% 100%, rgba(87, 27, 193, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(11, 19, 38, 1); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 73, 75, 0.5); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 240, 255, 0.5); 
+        }
+        
+        .doc-section {
+            border-left: 2px solid rgba(0, 240, 255, 0.3);
+            padding-left: 24px;
+            margin-bottom: 48px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-screen left-0 top-0 w-64 bg-surface-container-lowest border-r border-outline-variant/30 p-md gap-sm fixed z-40">
+<div class="flex items-center gap-sm mb-lg">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center pulse-dot">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">widgets</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-inverse-primary text-[20px] leading-tight">Pulse UI</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Component Guide</p>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-on-surface py-xs px-sm rounded-lg font-label-sm text-label-sm font-bold flex items-center justify-center gap-xs hover:bg-surface-variant transition-colors mb-md border border-outline-variant/50">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            Back to Dashboard
+        </button>
+<div class="flex-1 flex flex-col gap-base">
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold text-primary" href="#layout">
+<span class="material-symbols-outlined text-[20px]">web</span>
+                Layout Shell
+            </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg bg-primary-container text-on-primary-container font-bold font-label-sm text-label-sm shadow-[0_0_15px_rgba(0,240,255,0.3)]" href="#core">
+<span class="material-symbols-outlined text-[20px]">category</span>
+                Core Components
+            </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold text-primary" href="#cards">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+                Data Cards
+            </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold text-primary" href="#tables">
+<span class="material-symbols-outlined text-[20px]">table_rows</span>
+                Data Tables
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-64 w-full relative">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flex justify-between items-center px-lg py-sm w-full z-50 sticky top-0 h-[72px]">
+<div class="flex items-center gap-md md:hidden">
+<span class="material-symbols-outlined text-primary text-[28px]">menu</span>
+</div>
+<div class="flex-1 md:flex-none">
+<h2 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-container text-[24px]">Pulse Engine — UI Component Guide</h2>
+</div>
+<div class="hidden md:flex items-center gap-sm bg-surface-container px-sm py-base rounded-full border border-outline-variant glass-panel">
+<span class="font-label-sm text-label-sm text-on-surface-variant">System Version v2.4</span>
+</div>
+<div class="flex items-center gap-sm">
+<button class="hidden md:flex bg-transparent border border-secondary-container text-secondary-fixed hover:bg-secondary-container/20 py-xs px-sm rounded-lg font-label-sm text-label-sm transition-colors items-center gap-xs">
+                    Export PDF
+                    <span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</header>
+<!-- Dashboard Canvas / Documentation -->
+<div class="p-margin-mobile md:p-margin-desktop flex-1 flex flex-col gap-xl max-w-[1200px] mx-auto w-full">
+<!-- Section: Core Components -->
+<div class="doc-section" id="core">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-on-surface mb-xs">Core Components</h2>
+<p class="font-body-md text-on-surface-variant">These components ensure that every report is consistent, readable, and professional.</p>
+</div>
+<!-- Component: Critical Verbatim Card -->
+<div class="mb-xl">
+<h3 class="font-headline-md text-primary mb-sm">Critical Verbatim Card</h3>
+<p class="text-body-md text-on-surface-variant mb-md">Grounds the data in the real user voice. Shows refined treatment for spotting severe feedback.</p>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 mb-sm">
+<!-- Preview -->
+<div class="bg-error/5 border border-error/20 rounded-lg p-sm hover:border-error/50 transition-colors w-full max-w-2xl mx-auto">
+<div class="flex justify-between items-start mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-error">User_9921</span>
+<span class="text-[10px] text-on-surface-variant opacity-60">• Play Store • 1m ago</span>
+</div>
+<span class="bg-error text-on-error text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">CRITICAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px] leading-relaxed italic">"The app completely crashes every time I try to confirm my UPI payment. This is unacceptable for a trading platform."</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">bg-error/5</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">border-error/20</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">italic</span>
+</div>
+</div>
+<!-- Component: Sentiment Metric Card -->
+<div class="mb-xl" id="cards">
+<h3 class="font-headline-md text-primary mb-sm">Sentiment Metric Card</h3>
+<p class="text-body-md text-on-surface-variant mb-md">Small data pods with micro-charts and trend indicators.</p>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 mb-sm flex justify-center">
+<!-- Preview -->
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col gap-xs relative overflow-hidden w-64">
+<div class="absolute top-0 right-0 p-sm text-secondary-fixed">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Velocity Score</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-secondary-fixed">8.4k</span>
+<div class="flex items-center gap-xs text-tertiary-fixed-dim font-label-sm text-label-sm mt-auto">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> 12.1% spike
+                    </div>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">glass-panel</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">text-secondary-fixed</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">text-tertiary-fixed-dim</span>
+</div>
+</div>
+<!-- Component: Negative Cluster Table -->
+<div class="mb-xl" id="tables">
+<h3 class="font-headline-md text-primary mb-sm">Negative Cluster Table</h3>
+<p class="text-body-md text-on-surface-variant mb-md">Actionable table layout showing topics, volume, and severity.</p>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 mb-sm overflow-x-auto">
+<!-- Preview -->
+<table class="w-full text-left border-collapse min-w-[600px]">
+<thead>
+<tr class="border-b border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm">
+<th class="pb-xs font-normal">Cluster Topic</th>
+<th class="pb-xs font-normal">Volume</th>
+<th class="pb-xs font-normal">Severity</th>
+<th class="pb-xs font-normal text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-body-md">
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container/30 transition-colors">
+<td class="py-sm">
+<div class="flex items-center gap-xs">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="text-on-surface">Checkout Timeout</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1 rounded uppercase">App</span>
+</div>
+</td>
+<td class="py-sm font-label-sm text-on-surface">342</td>
+<td class="py-sm">
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error w-[90%]"></div>
+</div>
+</td>
+<td class="py-sm text-right">
+<button class="bg-transparent border border-outline text-on-surface hover:border-primary hover:text-primary px-2 py-1 rounded text-label-sm font-label-sm transition-colors">Investigate</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">hover:bg-surface-container/30</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">bg-error</span>
+</div>
+</div>
+<!-- Component: Keyword Cloud -->
+<div class="mb-xl">
+<h3 class="font-headline-md text-primary mb-sm">Keyword Cloud</h3>
+<p class="text-body-md text-on-surface-variant mb-md">AI Keyword Extraction component with prioritized tags.</p>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 mb-sm">
+<!-- Preview -->
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-error/20 text-error border border-error/30 rounded-full font-label-sm text-label-sm">crash on startup</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-secondary-fixed border border-secondary-container/50 rounded-full font-label-sm text-label-sm">upi mandate</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant border border-outline-variant/50 rounded-full font-label-sm text-label-sm">ui refresh</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant border border-outline-variant/50 rounded-full font-label-sm text-label-sm">dark mode</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">rounded-full</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">bg-error/20</span>
+</div>
+</div>
+<!-- Component: Action Priority Card -->
+<div class="mb-xl">
+<h3 class="font-headline-md text-primary mb-sm">Action Priority Card</h3>
+<p class="text-body-md text-on-surface-variant mb-md">High-impact suggestions categorized by urgency (P1, P2, P3).</p>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 mb-sm flex flex-col md:flex-row gap-md">
+<!-- Preview P1 -->
+<div class="flex-1 glass-panel rounded-xl p-sm border-l-4 border-l-secondary-fixed">
+<div class="flex items-center gap-xs mb-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold">P1 CRITICAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px]">Investigate UPI payment gateway timeout issues</p>
+</div>
+<!-- Preview P2 -->
+<div class="flex-1 glass-panel rounded-xl p-sm border-l-4 border-l-[#ffb300]">
+<div class="flex items-center gap-xs mb-2">
+<span class="material-symbols-outlined text-[#ffb300] text-[18px]">lightbulb</span>
+<span class="font-label-sm text-label-sm text-[#ffb300] font-bold">P2 STRATEGIC</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px]">Improve onboarding flow for new margin traders</p>
+</div>
+<!-- Preview P3 -->
+<div class="flex-1 glass-panel rounded-xl p-sm border-l-4 border-l-tertiary-fixed-dim">
+<div class="flex items-center gap-xs mb-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-bold">P3 OPERATIONAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px]">Update tooltip copy on mutual fund SIP page</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">border-l-4</span>
+<span class="bg-surface-container px-3 py-1 rounded font-label-sm text-label-sm text-tertiary-fixed-dim border border-outline-variant/30">glass-panel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-bright dark:bg-surface-dim border-t border-outline-variant dark:border-outline w-full py-lg mt-auto z-10 relative">
+<div class="max-w-[1600px] mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Groww Internal Pulse • Component Guide</span>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-secondary dark:text-on-secondary-container hover:text-primary transition-colors opacity-80 cursor-pointer">System v2.4</span>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

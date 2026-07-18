@@ -1,0 +1,461 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pulse Insight Engine - Sentiment Velocity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e9ddff",
+                        "on-tertiary-container": "#006d4a",
+                        "on-surface-variant": "#b9cacb",
+                        "on-error": "#690005",
+                        "surface": "#0b1326",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "on-secondary-fixed": "#23005c",
+                        "surface-container-lowest": "#060e20",
+                        "surface-bright": "#31394d",
+                        "on-primary-fixed": "#002022",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#7df4ff",
+                        "outline-variant": "#3b494b",
+                        "error": "#ffb4ab",
+                        "on-primary": "#00363a",
+                        "tertiary-container": "#65f2b5",
+                        "surface-container-low": "#131b2e",
+                        "tertiary": "#d8ffe7",
+                        "surface-container-high": "#222a3d",
+                        "primary-fixed-dim": "#00dbe9",
+                        "primary": "#dbfcff",
+                        "on-primary-container": "#006970",
+                        "surface-tint": "#00dbe9",
+                        "on-secondary": "#3c0091",
+                        "inverse-surface": "#dae2fd",
+                        "secondary": "#d0bcff",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary": "#003824",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-background": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dae2fd",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-secondary-container": "#c4abff",
+                        "surface-container-highest": "#2d3449",
+                        "surface-dim": "#0b1326",
+                        "secondary-container": "#571bc1",
+                        "on-primary-fixed-variant": "#004f54",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "primary-container": "#00f0ff",
+                        "background": "#0b1326",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "outline": "#849495",
+                        "inverse-primary": "#006970"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "64px",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "md": "24px",
+                        "margin-desktop": "32px",
+                        "xs": "8px",
+                        "gutter": "20px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(34, 42, 61, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(0, 219, 233, 0.02);
+        }
+        .glass-panel:hover {
+            background: rgba(34, 42, 61, 0.5);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            box-shadow: inset 0 0 20px rgba(0, 219, 233, 0.05), 0 0 15px rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-panel-active {
+             background: rgba(34, 42, 61, 0.6);
+            border: 1px solid rgba(0, 240, 255, 0.6);
+            box-shadow: inset 0 0 20px rgba(0, 219, 233, 0.1), 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+        
+        /* Neon chart elements */
+        .neon-line-cyan {
+            stroke: #00f0ff;
+            stroke-width: 2;
+            filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8));
+        }
+        .neon-area-cyan {
+            fill: url(#cyan-gradient);
+        }
+        .neon-bar-violet {
+            fill: rgba(208, 188, 255, 0.8);
+            filter: drop-shadow(0 0 4px rgba(208, 188, 255, 0.6));
+        }
+        .neon-bar-violet:hover {
+             fill: rgba(208, 188, 255, 1);
+            filter: drop-shadow(0 0 8px rgba(208, 188, 255, 0.9));
+        }
+        
+        .pulse-dot {
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 240, 255, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+        }
+
+        /* Ambient background glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.05) 0%, transparent 70%),
+                        radial-gradient(circle at 100% 100%, rgba(87, 27, 193, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(11, 19, 38, 1); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 73, 75, 0.5); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 219, 233, 0.5); 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-screen left-0 top-0 w-64 bg-surface-container-lowest border-r border-outline-variant/30 p-md gap-sm fixed z-40">
+<div class="flex items-center gap-sm mb-lg">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center pulse-dot">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-inverse-primary text-[20px] leading-tight">Weekly Pulse</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Product Insights</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-xs px-sm rounded-lg font-label-sm text-label-sm font-bold flex items-center justify-center gap-xs hover:bg-primary transition-colors mb-md">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Report
+        </button>
+<div class="flex-1 flex flex-col gap-base"><a class="flex items-center gap-sm px-sm py-xs rounded-lg bg-primary text-on-primary font-bold font-label-sm text-label-sm shadow-[0_0_15px_rgba(0,219,233,0.3)]" href="#"><span class="material-symbols-outlined text-[20px]">hourglass_empty</span>Current Week</a><a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold text-primary" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span>Trend Analysis</a><a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold text-primary" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span>Saved Insights</a></div>
+<div class="mt-auto flex flex-col gap-base border-t border-outline-variant pt-sm">
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm text-on-surface font-semibold text-primary" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm text-on-surface font-semibold text-primary" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                Help
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-64 w-full relative">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flex justify-between items-center px-lg py-sm w-full z-50 sticky top-0 h-[72px]">
+<div class="flex items-center gap-md md:hidden">
+<span class="material-symbols-outlined text-primary text-[28px]">menu</span>
+</div>
+<div class="flex-1 md:flex-none">
+<h2 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-container text-[24px]">Groww Pulse</h2>
+</div>
+<!-- Global Pulse Status -->
+<div class="flex items-center gap-sm">
+<button class="hidden md:flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors">
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-xs hidden md:block"></div>
+<button class="hidden md:flex bg-transparent border border-secondary-container text-secondary-fixed hover:bg-secondary-container/20 py-xs px-sm rounded-lg font-label-sm text-label-sm transition-colors items-center gap-xs">
+                    Export PDF
+                    <span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden ml-xs">
+<img class="w-full h-full object-cover" data-alt="A futuristic geometric avatar placeholder with glowing cyan and deep violet accents, suitable for a dark mode high-tech dashboard. The image should be abstract, sharp, and slightly luminescent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEtwoGvBPnX91R0ec5cuuotAUFurbCQs5E-AQ8XiLlYisAHlOzr5ulBC7MlmOSeP6uiXrEBhHQMt_HzLlhhZcVjR580bjSimWXz2FbGq9y68F1k7nTkA3aFClcfHF5YdDegt_ZK_5eWMP8ZIyH1xYQsedta29S_qJX3huOIgXamRy9avTbXH-aSGQUbue7hPGRXTVRS1aj0FCFrQmWBn3H32FaxA0oX_zCgC7xHb7tFSFMSJ7LfA6w">
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas -->
+<div class="p-margin-mobile md:p-margin-desktop flex-1 flex flex-col gap-md max-w-[1600px] mx-auto w-full">
+<!-- Context Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-sm gap-sm">
+<div>
+<h2 class="font-headline-md font-semibold text-on-surface">Sentiment Analytics</h2>
+<p class="font-body-md text-on-surface-variant mt-base">High-level review breakdown &amp; velocity analysis for ISO Week 42.</p>
+</div>
+<div class="flex gap-xs">
+<span class="bg-surface-container-high text-on-surface-variant border border-outline-variant px-sm py-base rounded font-label-sm text-label-sm flex items-center gap-xs glass-panel">
+<span class="material-symbols-outlined text-[14px]">filter_list</span> All Platforms
+                    </span>
+<span class="bg-secondary-container/20 text-secondary-fixed border border-secondary-container/50 px-sm py-base rounded font-label-sm text-label-sm flex items-center gap-xs glass-panel">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> AI Automated
+                    </span>
+</div>
+</div>
+<!-- Top Row KPIs -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col gap-xs relative overflow-hidden">
+<div class="absolute top-0 right-0 p-sm text-primary-container">
+<span class="material-symbols-outlined">thumbs_up_down</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Net Sentiment</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-primary">+42.8</span>
+<div class="flex items-center gap-xs text-tertiary-fixed-dim font-label-sm text-label-sm mt-auto">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> 5.2% vs last week
+                    </div>
+</div>
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col gap-xs relative overflow-hidden">
+<div class="absolute top-0 right-0 p-sm text-secondary-fixed">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Velocity Score</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-secondary-fixed">8.4k</span>
+<div class="flex items-center gap-xs text-tertiary-fixed-dim font-label-sm text-label-sm mt-auto">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> 12.1% spike
+                    </div>
+</div>
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col gap-xs relative overflow-hidden">
+<div class="absolute top-0 right-0 p-sm text-error">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Critical Mentions</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-error">124</span>
+<div class="flex items-center gap-xs text-error-container font-label-sm text-label-sm mt-auto">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span> 2.4% reduction
+                    </div>
+</div>
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col gap-xs relative overflow-hidden border border-primary-container/30">
+<div class="absolute inset-0 bg-primary-container/5"></div>
+<div class="absolute top-0 right-0 p-sm text-primary-container">
+<span class="material-symbols-outlined pulse-dot" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider z-10">AI Confidence</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-on-surface z-10">94.2%</span>
+<div class="flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm mt-auto z-10">
+                         Based on 142k inputs
+                    </div>
+</div>
+</div>
+<!-- Bento Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-sm md:gap-md h-auto lg:h-[400px]">
+<!-- Sentiment Velocity Chart -->
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col lg:col-span-2 h-full overflow-hidden">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md font-semibold text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-error">format_quote</span>
+            Critical Verbatims
+        </h3>
+<div class="flex items-center gap-xs">
+<span class="bg-error/20 text-error text-[10px] px-2 py-0.5 rounded-full border border-error/50 uppercase font-bold">3 URGENT ISSUES</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto pr-1 flex flex-col gap-sm custom-scrollbar">
+<div class="bg-error/5 border border-error/20 rounded-lg p-sm hover:border-error/50 transition-colors">
+<div class="flex justify-between items-start mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-error">User_9921</span>
+<span class="text-[10px] text-on-surface-variant opacity-60">• 1m ago</span>
+</div>
+<span class="bg-error text-on-error text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">CRITICAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px] leading-relaxed italic">"The app completely crashes every time I try to confirm my UPI payment. This is unacceptable for a trading platform."</p>
+</div>
+<div class="bg-error/5 border border-error/20 rounded-lg p-sm hover:border-error/50 transition-colors">
+<div class="flex justify-between items-start mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-error">User_4432</span>
+<span class="text-[10px] text-on-surface-variant opacity-60">• 4m ago</span>
+</div>
+<span class="bg-error text-on-error text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">CRITICAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px] leading-relaxed italic">"Funds were debited from my bank but are not reflecting in the Groww wallet. Support is not responding!"</p>
+</div>
+<div class="bg-error/5 border border-error/20 rounded-lg p-sm hover:border-error/50 transition-colors">
+<div class="flex justify-between items-start mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-error">User_1209</span>
+<span class="text-[10px] text-on-surface-variant opacity-60">• 5m ago</span>
+</div>
+<span class="bg-error text-on-error text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">CRITICAL</span>
+</div>
+<p class="text-body-md text-on-surface font-semibold text-[14px] leading-relaxed italic">"Getting a timeout error during the final checkout step on the mobile app. Please investigate immediately."</p>
+</div>
+</div>
+</div>
+<!-- Rating Distribution -->
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col h-full glass-panel-active">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md font-semibold text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">star_half</span>
+                            Rating Distribution
+                        </h3>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-sm">
+<!-- Bar 5 -->
+<div class="flex items-center gap-xs"><span class="w-8 text-label-sm font-bold text-primary text-right">5★</span><div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]"><div class="h-full bg-primary shadow-[0_0_10px_rgba(0,240,255,0.5)] w-[65%] rounded-full transition-all duration-500"></div></div><span class="w-10 text-label-sm font-bold text-primary text-right">65%</span></div>
+<!-- Bar 4 -->
+<div class="flex items-center gap-xs"><span class="w-8 text-label-sm font-semibold text-on-surface-variant text-right">4★</span><div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary/60 w-[20%] rounded-full"></div></div><span class="w-10 text-label-sm font-semibold text-on-surface text-right">20%</span></div>
+<!-- Bar 3 -->
+<div class="flex items-center gap-xs"><span class="w-8 text-label-sm font-semibold text-on-surface-variant text-right">3★</span><div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-outline-variant w-[8%] rounded-full"></div></div><span class="w-10 text-label-sm font-semibold text-on-surface text-right">8%</span></div>
+<!-- Bar 2 -->
+<div class="flex items-center gap-xs"><span class="w-8 text-label-sm font-semibold text-on-surface-variant text-right">2★</span><div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-error-container/40 w-[4%] rounded-full"></div></div><span class="w-10 text-label-sm font-semibold text-on-surface text-right">4%</span></div>
+<!-- Bar 1 -->
+<div class="flex items-center gap-xs"><span class="w-8 text-label-sm font-semibold text-on-surface-variant text-right">1★</span><div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-error/40 w-[3%] rounded-full"></div></div><span class="w-10 text-label-sm font-semibold text-on-surface text-right">3%</span></div>
+</div>
+<div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant"><div class="flex flex-col gap-1 w-full"><div class="flex justify-between items-center"><span class="text-label-sm text-on-surface-variant opacity-80">Total Reviews</span><span class="text-label-sm font-bold text-on-surface">14,209</span></div><div class="flex justify-between items-center"><span class="text-label-sm text-on-surface-variant opacity-80">Average Rating</span><span class="text-label-sm font-bold text-tertiary-fixed-dim flex items-center gap-1">4.4 <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span></span></div></div></div>
+</div>
+</div>
+<!-- Bottom Data Table / Heatmap -->
+<div class="glass-panel rounded-xl p-sm md:p-md flex flex-col mt-xs mb-lg">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md font-semibold text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-error text-[18px]">bug_report</span>
+                        Top Negative Clusters
+                    </h3>
+<button class="text-primary font-label-sm text-label-sm hover:underline">View All Clusters</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[600px]">
+<thead>
+<tr class="border-b border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm">
+<th class="pb-xs font-normal">Cluster Topic</th>
+<th class="pb-xs font-normal">Volume</th>
+<th class="pb-xs font-normal">Severity</th>
+<th class="pb-xs font-normal">Trend</th>
+<th class="pb-xs font-normal text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-body-md">
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container/30 transition-colors">
+<td class="py-sm">
+<div class="flex items-center gap-xs">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="">Checkout Timeout</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1 rounded uppercase">App</span>
+</div>
+</td>
+<td class="py-sm font-label-sm">342</td>
+<td class="py-sm">
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error w-[90%]"></div>
+</div>
+</td>
+<td class="py-sm text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +14%
+                                </td>
+<td class="py-sm text-right">
+<button class="bg-transparent border border-outline text-on-surface hover:border-primary hover:text-primary px-2 py-1 rounded text-label-sm font-label-sm transition-colors">Investigate</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container/30 transition-colors">
+<td class="py-sm">
+<div class="flex items-center gap-xs">
+<div class="w-2 h-2 rounded-full bg-error-container"></div>
+<span class="">Missing Email Receipt</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1 rounded uppercase">Web</span>
+</div>
+</td>
+<td class="py-sm font-label-sm">128</td>
+<td class="py-sm">
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error-container w-[65%]"></div>
+</div>
+</td>
+<td class="py-sm text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +5%
+                                </td>
+<td class="py-sm text-right">
+<button class="bg-transparent border border-outline text-on-surface hover:border-primary hover:text-primary px-2 py-1 rounded text-label-sm font-label-sm transition-colors">Investigate</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors">
+<td class="py-sm">
+<div class="flex items-center gap-xs">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></div>
+<span class="">Password Reset Delay</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1 rounded uppercase">API</span>
+</div>
+</td>
+<td class="py-sm font-label-sm">45</td>
+<td class="py-sm">
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim w-[30%]"></div>
+</div>
+</td>
+<td class="py-sm text-tertiary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> -2%
+                                </td>
+<td class="py-sm text-right">
+<button class="bg-transparent border border-outline text-on-surface hover:border-primary hover:text-primary px-2 py-1 rounded text-label-sm font-label-sm transition-colors">Investigate</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-bright dark:bg-surface-dim border-t border-outline-variant dark:border-outline w-full py-lg mt-auto z-10 relative">
+<div class="max-w-[1600px] mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Groww Internal Pulse • ISO Week 42</span>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-secondary dark:text-on-secondary-container hover:text-primary transition-colors opacity-80 cursor-pointer">Delivery ID: 99281</span>
+<span class="font-label-md text-label-md text-secondary dark:text-on-secondary-container hover:text-primary transition-colors opacity-80 cursor-pointer">Timestamp: 2023-10-24 10:00 UTC</span>
+</div>
+</div>
+</footer>
+</main>
+
+
+</body></html>

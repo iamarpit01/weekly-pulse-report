@@ -24,13 +24,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: Create Google Credentials File
+        env:
+          GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+        run: |
+          echo "$GCP_SERVICE_ACCOUNT" > service_account.json
+          
       - name: Run Groww Pulse Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TARGET_DOC_ID: ${{ secrets.TARGET_DOC_ID }}
           STAKEHOLDER_EMAILS: ${{ secrets.STAKEHOLDER_EMAILS }}
-          # Depending on how the Google Workspace MCP server is deployed,
-          # you might need to add Google credentials to the environment here as well.
+          GOOGLE_APPLICATION_CREDENTIALS: service_account.json
         run: |
           # PYTHONPATH is needed to allow python to find the 'src' module
           PYTHONPATH=. python src/main.py --product Groww --draft-only false

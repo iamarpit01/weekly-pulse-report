@@ -2,28 +2,28 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "App Performance and Technical Issues",
+      "theme_name": "Poor Customer Support and Withdrawal Issues",
       "actionable_ideas": [
-        "Conduct thorough testing after updates to prevent app crashes and glitches",
-        "Improve the user interface for linking bank accounts and ensure IFSC codes are easily accessible",
-        "Optimize the app's performance during peak hours to prevent downtime"
+        "Improve the responsiveness and competence of customer support agents",
+        "Streamline the withdrawal process to reduce wait times and errors",
+        "Increase transparency around fees and charges to avoid unexpected deductions"
       ],
       "verbatim_quotes": [
         {
-          "quote": "after this current update, app is restarting again and again.... pls solve this issue",
+          "quote": "They are fine till you dont need them . The moment you need a resolution it is impossible to connect to their agent and even if by God's grace that happens that agent would not be competent enough to resolve your issue.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "neither stoploss working nor target and so much glitch in app while opening",
+          "quote": "worst support ever, just like airtel you never get a chance to speak to a customer support agent",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "What a useless app, I tried to link my bank account through Google Pay but it is not happening, later I tried to fill it manually but the IFSC code is not showing",
+          "quote": "Worst support team I've ever seen. Replying too late and flood of response once reply then suddenly close the ticket.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 1,
-      "review_count": 6
+      "cluster_id": 7,
+      "review_count": 12
     }
   ],
   "total_reviews": 146,

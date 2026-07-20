@@ -6,7 +6,7 @@
       "actionable_ideas": [
         "Optimize the app's update process to reduce frequency and improve stability",
         "Enhance customer support by providing timely and personalized responses to user queries",
-        "Conduct thorough testing to identify and resolve technical glitches affecting trading and IPO applications"
+        "Conduct thorough testing to identify and fix technical glitches affecting trading and IPO applications"
       ],
       "verbatim_quotes": [
         {
@@ -18,7 +18,7 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes.Ipo status are not updating properly and mandates are not coming to upi once application is placed",
+          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes.",
           "author": "[REDACTED_USER]"
         }
       ],

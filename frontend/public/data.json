@@ -2,28 +2,28 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "Poor Customer Support and Withdrawal Issues",
+      "theme_name": "App Performance, Bugs, and Customer Support",
       "actionable_ideas": [
-        "Improve the responsiveness and competence of customer support agents",
-        "Streamline the withdrawal process to reduce delays and errors",
-        "Increase transparency about fees and charges associated with services"
+        "Optimize the app's update process to reduce frequency and improve stability",
+        "Enhance customer support by providing more personalized and timely responses",
+        "Conduct thorough testing to identify and fix technical glitches affecting trading and IPO applications"
       ],
       "verbatim_quotes": [
         {
-          "quote": "They are fine till you dont need them . The moment you need a resolution it is impossible to connect to their agent and even if by God's grace that happens that agent would not be competent enough to resolve your issue.",
+          "quote": "full of bugs update comes every day but still lagging",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "worst support ever, just like airtel you never get a chance to speak to a customer support agent",
+          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Worst support team I've ever seen. Replying too late and flood of response once reply then suddenly close the ticket.",
+          "quote": "None of my last ten IPO applications were allotted. Not even a single IPO was allotted to me",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 5,
-      "review_count": 12
+      "cluster_id": 0,
+      "review_count": 9
     }
   ],
   "total_reviews": 146,

@@ -2,37 +2,37 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "User Experience and App Performance",
+      "theme_name": "App Performance and Technical Issues",
       "actionable_ideas": [
-        "Improve the login process by re-evaluating the necessity of selfies for authentication",
-        "Optimize the app's performance to address slow loading times and errors",
-        "Enhance the chart functionality and consider adding more time frame options"
+        "Conduct thorough testing after updates to prevent app crashes and glitches",
+        "Improve the integration with Google Pay and IFSC code lookup for seamless bank account linking",
+        "Enhance the app's stability during peak usage hours, such as morning time"
       ],
       "verbatim_quotes": [
         {
-          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience.",
+          "quote": "after this current update, app is restarting again and again.... pls solve this issue",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
+          "quote": "neither stoploss working nor target and so much glitch in app while opening",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "very simple app.But but but major problem is their chart.Magnificently slow,it takes lots of time to load and sometimes just can't load.",
+          "quote": "after app updation, i am unable to see Cart during MF buy & not receiving OTP through sms only receiving OTP through email. pl check.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 9,
-      "review_count": 19
+      "cluster_id": 1,
+      "review_count": 6
     }
   ],
-  "total_reviews": 147,
+  "total_reviews": 146,
   "rating_distribution": {
-    "1": 45.57823129251701,
-    "2": 5.442176870748299,
-    "3": 9.523809523809524,
-    "4": 5.442176870748299,
-    "5": 34.01360544217687
+    "1": 45.89041095890411,
+    "2": 5.47945205479452,
+    "3": 8.904109589041095,
+    "4": 5.47945205479452,
+    "5": 34.24657534246575
   },
   "average_rating": 2.8,
   "net_sentiment": -11.6,

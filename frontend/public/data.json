@@ -4,17 +4,17 @@
     {
       "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Optimize the app's login process to reduce errors and eliminate unnecessary steps like selfies for known devices or accounts",
-        "Improve the app's performance and speed, particularly with features like chart loading",
-        "Enhance customer support by providing more effective and efficient issue resolution processes"
+        "Improve the login process by re-evaluating the necessity of selfies for authentication",
+        "Optimize the app's performance to address slow loading times and errors",
+        "Enhance the chart functionality and consider adding more time frame options"
       ],
       "verbatim_quotes": [
         {
-          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience. It makes stock market investing simple for beginners while offering all the features needed by experienced investors. Highly recommended!",
+          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "worst app. can't even just login due to error. even try again didn't work. how we r supposed to use it when it's experience is very poor. not even able to login so what expect next",
+          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
           "author": "[REDACTED_USER]"
         },
         {
@@ -24,170 +24,6 @@
       ],
       "cluster_id": 9,
       "review_count": 19
-    },
-    {
-      "theme_name": "Mutual Fund Features and User Experience",
-      "actionable_ideas": [
-        "Add technical analysis features for stocks and trading",
-        "Improve the accuracy of mutual fund investment tracking and portfolio valuation",
-        "Enhance user interface for mutual fund section, including features like tagging/purpose/goal for SIP investments"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "why MF prime is available for new users and not for old users .",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Great App for Mutual Fund investment but not that great for Stocks and Trading as there are no technicals available.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "It's good app with great UI/UX - one feature as a user i want and should be useful for others also that in the Mutual Fund section in the dashboard tab - Against all the MFs should be tagging/purpose/goal",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 7,
-      "review_count": 16
-    },
-    {
-      "theme_name": "User Experience and Feature Requests",
-      "actionable_ideas": [
-        "Implement additional features such as BOS, resistance, and support to enhance user experience",
-        "Improve the referral program by increasing transparency and ensuring timely rewards",
-        "Explore the possibility of allowing funds transferred to Groww to be used for daily transactions with interest"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "very best app.plz provide some options in groww app. examples BOS , resistance, support, FAV. and some more options.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "I am disappointed with the Groww app's referral program. I referred the app to others expecting to receive the promised rewards, but I did not receive any.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Groww app is good, it protects it's customers from losses. I was about to take a crazy trade on the end of expiry in crude oil. it warned me and stopped me from doing so.",
-          "author": "Unknown User"
-        }
-      ],
-      "cluster_id": 8,
-      "review_count": 11
-    },
-    {
-      "theme_name": "Poor Customer Support and Withdrawal Issues",
-      "actionable_ideas": [
-        "Improve the responsiveness and competence of customer support agents",
-        "Streamline the withdrawal process to reduce waiting times and errors",
-        "Increase transparency about fees and charges to avoid hidden costs"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "They are fine till you dont need them . The moment you need a resolution it is impossible to connect to their agent and even if by God's grace that happens that agent would not be competent enough to resolve your issue.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "worst support ever, just like airtel you never get a chance to speak to a customer support agent",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Worst support team I've ever seen. Replying too late and flood of response once reply then suddenly close the ticket.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 4,
-      "review_count": 11
-    },
-    {
-      "theme_name": "App Performance, Bugs, and Trading Issues",
-      "actionable_ideas": [
-        "Conduct thorough testing to identify and fix glitches affecting trading and profit/loss calculations",
-        "Improve server response times to prevent crashes and delays during market hours",
-        "Enhance the user interface to provide accurate and up-to-date information on stock prices and holdings"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "very bad trading app because it has some glitch which can change the btst prpfit section yesterday i set a btst then it show 260+ profit but today on saturaday whem the market is closed it shows -300+ loss on my demat",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "The app crashed when the market started. I had Vodafone share of avarage 13.83 and wanted to sell @14.05 but groww app was unable to fetch share details that I hold.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 2,
-      "review_count": 10
-    },
-    {
-      "theme_name": "App Performance and Customer Support Issues",
-      "actionable_ideas": [
-        "Prioritize bug fixes and performance optimization to reduce technical glitches and improve user experience",
-        "Enhance customer support by providing timely and personalized responses to user queries and concerns",
-        "Simplify the IPO application and tracking process to reduce user frustration"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "full of bugs update comes every day but still lagging",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "None of my last ten IPO applications were allotted. Not even a single IPO was allotted to me",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 1,
-      "review_count": 9
-    },
-    {
-      "theme_name": "App Performance and Technical Issues",
-      "actionable_ideas": [
-        "Conduct thorough testing after updates to prevent app crashes and glitches",
-        "Improve the bank account linking process, especially with Google Pay, and ensure IFSC codes are readily available",
-        "Optimize the app's performance during peak usage hours, such as morning time"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "after this current update, app is restarting again and again.... pls solve this issue",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "neither stoploss working nor target and so much glitch in app while opening",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "after app updation, i am unable to see Cart during MF buy & not receiving OTP through sms only receiving OTP through email. pl check.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 10,
-      "review_count": 6
-    },
-    {
-      "theme_name": "Charting and Performance Issues",
-      "actionable_ideas": [
-        "Improve the loading speed of charts, especially during market hours",
-        "Add more time frame options for charts, including lower time frames and 4hr chart data",
-        "Enhance the overall app performance to prevent freezing and errors"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "Application is too slow when market opens. When market is closed the app works smoothly.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy snowing symbol error for a long time.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "most third class app never open chart timely....bad for fno trading",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 3,
-      "review_count": 6
     }
   ],
   "total_reviews": 147,

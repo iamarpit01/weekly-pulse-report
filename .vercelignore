@@ -1,5 +1,5 @@
 # Ignore python backend files so Vercel doesn't try to build a Python server
-src/
+/src/
 requirements.txt
 run_and_push.sh
 railway.json

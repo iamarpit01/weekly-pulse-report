@@ -2,81 +2,57 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "High Brokerage Charges and App Issues",
-      "actionable_ideas": [
-        "Reduce or restructure brokerage charges to be more competitive with other fintech applications",
-        "Improve the transparency of charges, including displaying the share average price including brokerage and government charges",
-        "Enhance customer support to address user complaints and issues in a timely and satisfactory manner"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "bhai itna brokerage Kaun leta hai 1 din mein 2223 ka brokerage Le lete ho aam aadami aapke sath nahin jud Sakta...",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "brokerage charges bahut jyada hai esse kuch kam karne ko koshish kare",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "app thik h lekin trading me jo charges/fee ya jo tax h vo thoda kam hona chahiye ya to nahi hona chahiye",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 0,
-      "review_count": 29
-    },
-    {
       "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Optimize the login process to reduce errors and make it more efficient",
-        "Improve customer support by providing timely and effective solutions to user problems",
-        "Enhance the app's overall performance to prevent slowdowns and improve user satisfaction"
+        "Optimize the app's login process to reduce errors and eliminate unnecessary steps like selfies for known devices or accounts",
+        "Improve the app's performance and speed, particularly with features like chart loading",
+        "Enhance customer support by providing more effective and efficient issue resolution processes"
       ],
       "verbatim_quotes": [
         {
-          "quote": "worst app. can't even just login due to error. even try again didn't work.",
+          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience. It makes stock market investing simple for beginners while offering all the features needed by experienced investors. Highly recommended!",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "the app is getting slower and slower day by day. just making the experience painful.",
+          "quote": "worst app. can't even just login due to error. even try again didn't work. how we r supposed to use it when it's experience is very poor. not even able to login so what expect next",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "one of the very very very worst app.The customer care don't know any thing they ask for screen recorded video again again but they won't sort out the problem..",
+          "quote": "very simple app.But but but major problem is their chart.Magnificently slow,it takes lots of time to load and sometimes just can't load.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 11,
-      "review_count": 11
+      "cluster_id": 9,
+      "review_count": 19
     },
     {
-      "theme_name": "Investment Features and User Experience",
+      "theme_name": "Mutual Fund Features and User Experience",
       "actionable_ideas": [
-        "Provide technical analysis tools for stocks and trading to enhance user experience",
-        "Implement a feature to tag mutual funds with specific investment goals or purposes",
-        "Optimize the withdrawal process for mutual funds to reduce crediting time into bank accounts"
+        "Add technical analysis features for stocks and trading",
+        "Improve the accuracy of mutual fund investment tracking and portfolio valuation",
+        "Enhance user interface for mutual fund section, including features like tagging/purpose/goal for SIP investments"
       ],
       "verbatim_quotes": [
+        {
+          "quote": "why MF prime is available for new users and not for old users .",
+          "author": "[REDACTED_USER]"
+        },
         {
           "quote": "Great App for Mutual Fund investment but not that great for Stocks and Trading as there are no technicals available.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Investing Made Effortless Groww has completely transformed the way I manage my investments.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Against all the MFs should be tagging/purpose/goal - Most of the people invest in SIP for specific purpose like Trip,Child Marriage, Child Education and many more",
+          "quote": "It's good app with great UI/UX - one feature as a user i want and should be useful for others also that in the Mutual Fund section in the dashboard tab - Against all the MFs should be tagging/purpose/goal",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 8,
-      "review_count": 11
+      "cluster_id": 7,
+      "review_count": 16
     },
     {
       "theme_name": "User Experience and Feature Requests",
       "actionable_ideas": [
-        "Add technical analysis tools such as BOS, resistance, and support to the app",
+        "Implement additional features such as BOS, resistance, and support to enhance user experience",
         "Improve the referral program by increasing transparency and ensuring timely rewards",
         "Explore the possibility of allowing funds transferred to Groww to be used for daily transactions with interest"
       ],
@@ -94,7 +70,7 @@
           "author": "Unknown User"
         }
       ],
-      "cluster_id": 9,
+      "cluster_id": 8,
       "review_count": 11
     },
     {
@@ -102,7 +78,7 @@
       "actionable_ideas": [
         "Improve the responsiveness and competence of customer support agents",
         "Streamline the withdrawal process to reduce waiting times and errors",
-        "Enhance transparency regarding fees and charges to avoid hidden costs"
+        "Increase transparency about fees and charges to avoid hidden costs"
       ],
       "verbatim_quotes": [
         {
@@ -118,59 +94,15 @@
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 7,
+      "cluster_id": 4,
       "review_count": 11
     },
     {
-      "theme_name": "Poor Customer Support and Technical Issues",
+      "theme_name": "App Performance, Bugs, and Trading Issues",
       "actionable_ideas": [
-        "Improve customer support responsiveness and empathy, especially for long-standing customers",
-        "Address technical issues such as exchange connectivity problems, OTP verification failures, and trading platform glitches",
-        "Enhance transparency in fee structures and provide clear refund policies for services like DDPI activation"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "Very disappointing support for a loyal customer. I'm now considering moving my investments to another platform.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "You have added that option in 915 window its not helpful.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 6,
-      "review_count": 10
-    },
-    {
-      "theme_name": "App Performance and Customer Support Issues",
-      "actionable_ideas": [
-        "Improve the app's technical stability and fix existing bugs to prevent financial losses for users",
-        "Enhance customer support by providing timely and personalized responses to user queries and concerns",
-        "Streamline the IPO application and UPI payment processes to reduce delays and improve user experience"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "If there is an option of giving zero stars for it I would have given it. The customer care service is very poor i have asked for a status update on the IPO I had no reply and all is automated.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes.Ipo status are not updating properly and mandates are not coming to upi once application is placed.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "What a useless app, I tried to link my bank account through Google Pay but it is not happening, later I tried to fill it manually but the IFSC code is not showing, I have been sending the message in Grove for the last 3 days but it is still there.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 1,
-      "review_count": 10
-    },
-    {
-      "theme_name": "App Performance and Trading Issues",
-      "actionable_ideas": [
-        "Improve the app's stability and performance during market hours to prevent crashes and incorrect data display",
-        "Enhance the accuracy of trading data, including strike prices and profit/loss calculations",
-        "Optimize the user interface to prevent glitches and ensure seamless execution of trades"
+        "Conduct thorough testing to identify and fix glitches affecting trading and profit/loss calculations",
+        "Improve server response times to prevent crashes and delays during market hours",
+        "Enhance the user interface to provide accurate and up-to-date information on stock prices and holdings"
       ],
       "verbatim_quotes": [
         {
@@ -178,136 +110,84 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Grow is showing the wrong strike price for the nifty 50 index strike price 24450 call showing Rs. 58.10 but the original price is Rs.69.30 in Upstox and other app",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "this is the worst application for traders. I had some shares to sell. It didn't let me that happen when the price was in my target level.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 4,
-      "review_count": 9
-    },
-    {
-      "theme_name": "Trading Experience and Features",
-      "actionable_ideas": [
-        "Implement a more intuitive and flexible stop-loss and target setting system, including the ability to set multiple SL and TGT on the same trade",
-        "Enhance the app's trading features to include spot-based triggers for option trading and allow users to change indexes with ease",
-        "Improve the order placement and execution process, addressing issues with intraday orders, delivery, and random resets"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "Why there is no option to change index in one tap trading/scalper? Tomorrow is the expiry of Sensex and this scalper is showing NIFTY 50",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Feature Request: Spot-based trigger for option trading. I trade NIFTY options based on spot levels. During fast market moves, option prices change quickly and I miss entries.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "orders can't be placed or modify on exchange.",
+          "quote": "The app crashed when the market started. I had Vodafone share of avarage 13.83 and wanted to sell @14.05 but groww app was unable to fetch share details that I hold.",
           "author": "[REDACTED_USER]"
         }
       ],
       "cluster_id": 2,
-      "review_count": 8
+      "review_count": 10
     },
     {
-      "theme_name": "Ease of Use and Investment Experience",
+      "theme_name": "App Performance and Customer Support Issues",
       "actionable_ideas": [
-        "Simplify the app's interface to make investing easier for beginners and experienced investors alike",
-        "Separate loan-related features to avoid irritating users who are not interested in loans",
-        "Consider adding a feature to file income tax directly through the app"
+        "Prioritize bug fixes and performance optimization to reduce technical glitches and improve user experience",
+        "Enhance customer support by providing timely and personalized responses to user queries and concerns",
+        "Simplify the IPO application and tracking process to reduce user frustration"
       ],
       "verbatim_quotes": [
         {
-          "quote": "the smilplicity of the app is the best and the features are very easy to use and investing makes very much reliable",
+          "quote": "full of bugs update comes every day but still lagging",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience.",
+          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "This app has a very user-friendly interface, making it quite easy and safe to use.",
+          "quote": "None of my last ten IPO applications were allotted. Not even a single IPO was allotted to me",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 12,
-      "review_count": 7
+      "cluster_id": 1,
+      "review_count": 9
+    },
+    {
+      "theme_name": "App Performance and Technical Issues",
+      "actionable_ideas": [
+        "Conduct thorough testing after updates to prevent app crashes and glitches",
+        "Improve the bank account linking process, especially with Google Pay, and ensure IFSC codes are readily available",
+        "Optimize the app's performance during peak usage hours, such as morning time"
+      ],
+      "verbatim_quotes": [
+        {
+          "quote": "after this current update, app is restarting again and again.... pls solve this issue",
+          "author": "[REDACTED_USER]"
+        },
+        {
+          "quote": "neither stoploss working nor target and so much glitch in app while opening",
+          "author": "[REDACTED_USER]"
+        },
+        {
+          "quote": "after app updation, i am unable to see Cart during MF buy & not receiving OTP through sms only receiving OTP through email. pl check.",
+          "author": "[REDACTED_USER]"
+        }
+      ],
+      "cluster_id": 10,
+      "review_count": 6
     },
     {
       "theme_name": "Charting and Performance Issues",
       "actionable_ideas": [
-        "Optimize the app for faster loading of charts, especially during market hours",
+        "Improve the loading speed of charts, especially during market hours",
         "Add more time frame options for charts, including lower time frames and 4hr chart data",
-        "Improve the overall user experience by reducing errors and ensuring timely access to chart data"
+        "Enhance the overall app performance to prevent freezing and errors"
       ],
       "verbatim_quotes": [
-        {
-          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy snowing symbol error for a long time.",
-          "author": "[REDACTED_USER]"
-        },
         {
           "quote": "Application is too slow when market opens. When market is closed the app works smoothly.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "lower time frame chart are not shown.. please provide all the time frame",
+          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy snowing symbol error for a long time.",
+          "author": "[REDACTED_USER]"
+        },
+        {
+          "quote": "most third class app never open chart timely....bad for fno trading",
           "author": "[REDACTED_USER]"
         }
       ],
       "cluster_id": 3,
       "review_count": 6
-    },
-    {
-      "theme_name": "User Experience and Satisfaction",
-      "actionable_ideas": [
-        "Enhance the user interface for easier navigation and trading",
-        "Improve the security features to address concerns about the app being a 'gold digger' or 'dangerous'",
-        "Develop more educational resources for skill development and investment knowledge"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "transparent and clear trading platform easy and quick money transfer in account",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "A real experience of swift online investment and trading app unique in all aspects. Great going \ud83d\udc4f",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "this trading side is more badd. this side is very dengar. this app is gold digger. a blady app.",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 10,
-      "review_count": 5
-    },
-    {
-      "theme_name": "Mutual Fund Features and Data Accuracy",
-      "actionable_ideas": [
-        "Add IDCW fund option for dividend reinvestment and payout",
-        "Improve data accuracy for mutual fund investments and shareholding patterns",
-        "Enhance user interface for accessing SID documents and market indices"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "Kindly add MF IDCW fund against dividend reinvestment option & dividend payout option",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "shareholding pattern mutual fund not showing. \ud83d\ude2d\ud83d\ude2d\ud83d\ude43 New version kiya update diya\ud83d\ude2d\ud83d\ude35\u200d\ud83d\udcab\ud83d\ude35\u200d\ud83d\udcab",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "inconsistency - I noticed an inconsistency in the Shareholding Pattern section",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 5,
-      "review_count": 5
     }
   ],
   "total_reviews": 147,

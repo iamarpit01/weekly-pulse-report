@@ -4,9 +4,9 @@
     {
       "theme_name": "High Brokerage Charges and App Issues",
       "actionable_ideas": [
-        "Reduce brokerage charges to make the app more competitive",
-        "Improve the app's performance and fix bugs to enhance user experience",
-        "Provide more transparent and detailed information about charges and fees"
+        "Reduce brokerage charges to be more competitive with other fintech applications",
+        "Improve the transparency of charges, including government and brokerage fees, to build user trust",
+        "Enhance the app's performance and fix bugs to prevent frequent crashes and improve the overall user experience"
       ],
       "verbatim_quotes": [
         {
@@ -28,9 +28,9 @@
     {
       "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Improve the login process by re-evaluating the necessity of selfies in addition to OTP",
-        "Optimize the app's performance to address issues with slowness and loading times",
-        "Enhance the chart functionality and consider adding more time frame options"
+        "Optimize the app's login process to reduce errors and make it more efficient",
+        "Improve the loading speed of charts and other features to enhance overall user experience",
+        "Consider adding more features such as filing income tax and additional time frames for candles"
       ],
       "verbatim_quotes": [
         {
@@ -50,11 +50,11 @@
       "review_count": 19
     },
     {
-      "theme_name": "Mutual Fund and Stock Investment Features",
+      "theme_name": "Mutual Fund and Investment Features",
       "actionable_ideas": [
-        "Add technical analysis features for stocks and trading",
-        "Improve the accuracy of mutual fund investment tracking and portfolio display",
-        "Enhance user interface for mutual fund and stock sections, including features like tagging/purpose/goal for mutual funds"
+        "Add technical analysis tools for stocks and trading",
+        "Improve the accuracy of mutual fund investment tracking and portfolio valuation",
+        "Enhance user interface for mutual fund sections, including features like tagging/purpose/goal for investments"
       ],
       "verbatim_quotes": [
         {
@@ -90,19 +90,19 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Groww app is good, it protects it's customers from losses. I was about to take a crazy trade on the end of expiry in crude oil. it warned me and stopped me from doing so.",
-          "author": "Unknown User"
+          "quote": "question? is there an option where funds transferred to groww can be used for daily transactions travel, food, etc.. and get interests as well...",
+          "author": "[REDACTED_USER]"
         }
       ],
       "cluster_id": 8,
       "review_count": 11
     },
     {
-      "theme_name": "Poor Customer Support Experience",
+      "theme_name": "Poor Customer Support and Withdrawal Issues",
       "actionable_ideas": [
         "Improve the responsiveness and competence of customer support agents",
-        "Enhance the transparency of fees and charges associated with services",
-        "Streamline the withdrawal and refund processes to reduce wait times"
+        "Streamline the withdrawal process to reduce delays and errors",
+        "Increase transparency about fees and charges associated with services"
       ],
       "verbatim_quotes": [
         {
@@ -124,9 +124,9 @@
     {
       "theme_name": "Poor Customer Support and Technical Issues",
       "actionable_ideas": [
-        "Improve customer support responsiveness and issue resolution",
-        "Enhance platform stability and fix technical issues causing financial losses",
-        "Increase transparency in fees, charges, and feature changes"
+        "Improve customer support responsiveness and empathy, especially for long-standing customers",
+        "Enhance platform stability and resolve exchange connectivity issues to prevent financial losses",
+        "Increase transparency about fees, charges, and feature changes to avoid unexpected surprises for users"
       ],
       "verbatim_quotes": [
         {
@@ -142,11 +142,11 @@
       "review_count": 10
     },
     {
-      "theme_name": "App Performance, Accuracy & Reliability Issues",
+      "theme_name": "App Performance, Accuracy & Trading Issues",
       "actionable_ideas": [
-        "Conduct thorough testing to identify and fix glitches affecting trading and profit/loss calculations",
-        "Improve server response times to prevent app crashes and ensure timely updates of stock prices and holdings",
-        "Enhance the user interface to provide accurate and consistent information, including strike prices and index options"
+        "Improve the app's stability and performance during peak market hours to prevent crashes and incorrect price displays",
+        "Enhance the accuracy of strike prices and profit/loss calculations to prevent discrepancies",
+        "Implement features to allow users to change indices in one-tap trading/scalper and improve the overall user experience for traders"
       ],
       "verbatim_quotes": [
         {
@@ -154,11 +154,11 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "The app crashed when the market started. I had Vodafone share of avarage 13.83 and wanted to sell @14.05 but groww app was unable to fetch share details that I hold.",
+          "quote": "Grow is showing the wrong strike price for the nifty 50 index strike price 24450 call showing Rs. 58.10 but the original price is Rs.69.30 in Upstox and other app so don't trust grow they are doing fraud with everyone",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "after the recent update can't able to buy sell stocks,even stocks holding are not showing groww team please fix this",
+          "quote": "this is the worst application for traders. I had some shares to sell. It didn't let me that happen when the price was in my target level.",
           "author": "[REDACTED_USER]"
         }
       ],
@@ -192,9 +192,9 @@
     {
       "theme_name": "Trading Experience and Fees",
       "actionable_ideas": [
-        "Reduce brokerage charges to be more competitive with other fintech applications",
-        "Implement a more intuitive and flexible system for setting stop loss and target prices, including the option for spot-based triggers",
-        "Improve the order placement process to prevent errors and ensure that orders are executed as intended"
+        "Reduce brokerage charges to be more competitive in the market",
+        "Improve the order placement and execution process to prevent errors and missed trades",
+        "Add features such as spot-based triggers and drag SL/TGT options to enhance trading experience"
       ],
       "verbatim_quotes": [
         {
@@ -202,11 +202,11 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Feature Request: Spot-based trigger for option trading. I trade NIFTY options based on spot levels. During fast market moves, option prices change quickly and I miss entries.",
+          "quote": "Order placing is easy, Target/SL. For tax purpose account mentain is helpful, as emails receive for each transaction.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Order placing is easy, Target/SL. For tax purpose account mentain is helpful, as emails receive for each transaction.",
+          "quote": "Feature Request: Spot-based trigger for option trading. I trade NIFTY options based on spot levels.",
           "author": "[REDACTED_USER]"
         }
       ],
@@ -217,7 +217,7 @@
       "theme_name": "App Performance and Technical Issues",
       "actionable_ideas": [
         "Conduct thorough testing after updates to prevent app crashes and glitches",
-        "Improve the integration with Google Pay and IFSC code database for seamless bank account linking",
+        "Improve the integration with Google Pay and IFSC code lookup for seamless bank account linking",
         "Optimize the app's performance during peak hours, such as morning time, to prevent downtime"
       ],
       "verbatim_quotes": [
@@ -246,15 +246,15 @@
       ],
       "verbatim_quotes": [
         {
-          "quote": "Application is too slow when market opens. When market is closed the app works smoothly.",
-          "author": "[REDACTED_USER]"
-        },
-        {
           "quote": "lower time frame chart are not shown.. please provide all the time frame",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy snowing symbol error for a long time.",
+          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy",
+          "author": "[REDACTED_USER]"
+        },
+        {
+          "quote": "Application is too slow when market opens",
           "author": "[REDACTED_USER]"
         }
       ],

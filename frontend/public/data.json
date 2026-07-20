@@ -4,50 +4,26 @@
     {
       "theme_name": "App Performance and Customer Support Issues",
       "actionable_ideas": [
-        "Prioritize bug fixes and performance optimization to reduce glitches and improve user experience",
-        "Enhance customer support by providing timely and personalized responses to user queries and concerns",
-        "Simplify the IPO application process and ensure timely updates on application status"
+        "Optimize the app's update process to reduce frequency and improve stability",
+        "Enhance customer support by providing timely and personalized responses to user queries",
+        "Conduct thorough testing to identify and resolve technical glitches affecting trading and IPO applications"
       ],
       "verbatim_quotes": [
         {
-          "quote": "full of bugs update comes every day but still lagging",
+          "quote": "just got update twice within a week.!!! fed up with this update notifications N Make difficult to trade with it..",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes",
+          "quote": "Full technical glitches unlike other apps resulted in 20k loss",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "None of my last ten IPO applications were allotted. Not even a single IPO was allotted to me",
+          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes.Ipo status are not updating properly and mandates are not coming to upi once application is placed",
           "author": "[REDACTED_USER]"
         }
       ],
       "cluster_id": 0,
       "review_count": 9
-    },
-    {
-      "theme_name": "App Performance and Chart Issues",
-      "actionable_ideas": [
-        "Optimize the app for peak usage during market hours to prevent slow loading and crashes",
-        "Ensure that all time frames are available for charts, including lower time frames and 4hr chart data",
-        "Investigate and resolve the symbol error issue that prevents users from accessing chart data"
-      ],
-      "verbatim_quotes": [
-        {
-          "quote": "I AM VERY HAPPY \ud83d\ude0a But Now Charts Not Opening \ud83d\udd1c",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "such a waste user experience can't find 4hr chart data waste of time and energy snowing symbol error for a long time",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "Application is too slow when market opens",
-          "author": "[REDACTED_USER]"
-        }
-      ],
-      "cluster_id": 6,
-      "review_count": 5
     }
   ],
   "total_reviews": 146,

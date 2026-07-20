@@ -2,28 +2,28 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "App Performance and Technical Issues",
+      "theme_name": "Poor Customer Support and Withdrawal Issues",
       "actionable_ideas": [
-        "Conduct thorough testing of app updates before release to prevent bugs and glitches",
-        "Improve the app's stability and performance, especially during peak usage hours",
-        "Enhance the support system to address user queries and concerns in a timely manner"
+        "Improve the responsiveness and competence of customer support agents",
+        "Streamline the withdrawal process to reduce delays and errors",
+        "Increase transparency about fees and charges associated with services"
       ],
       "verbatim_quotes": [
         {
-          "quote": "after this current update, app is restarting again and again.... pls solve this issue",
+          "quote": "They are fine till you dont need them . The moment you need a resolution it is impossible to connect to their agent and even if by God's grace that happens that agent would not be competent enough to resolve your issue.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "neither stoploss working nor target and so much glitch in app while opening",
-          "author": "[REDACTED_USER]"
+          "quote": "Worst support ever, just like airtel you never get a chance to speak to a customer support agent",
+          "author": "Unknown User"
         },
         {
-          "quote": "after app updation, i am unable to see Cart during MF buy & not receiving OTP through sms only receiving OTP through email. pl check.",
+          "quote": "please don't take pledge amount. for active and deactivate they charge 700 +700 total 1400 and not mentioned any where.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 1,
-      "review_count": 6
+      "cluster_id": 5,
+      "review_count": 12
     }
   ],
   "total_reviews": 146,

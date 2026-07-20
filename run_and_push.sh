@@ -10,18 +10,26 @@ if [ -n "$GCP_SERVICE_ACCOUNT" ]; then
     export GOOGLE_APPLICATION_CREDENTIALS="service_account.json"
 fi
 
+# Force it to process the week again since we want daily updates
+rm -f .groww_state.json
+
 # 2. Run the Python pipeline
 echo "Running Python Pipeline..."
 PYTHONPATH=. python src/main.py --product Groww --draft-only false
 
 # 3. Commit and push the new data.json back to GitHub
 if [ -n "$GITHUB_PAT" ]; then
-    echo "Configuring git..."
+    echo "Configuring git and pushing changes..."
+    # Railway containers do not include the .git folder, so we clone a fresh copy
+    rm -rf /tmp/pulse-repo
+    git clone "https://${GITHUB_PAT}@github.com/iamarpit01/weekly-pulse-report.git" /tmp/pulse-repo
+    
+    # Copy the newly generated data.json into the cloned repo
+    cp frontend/public/data.json /tmp/pulse-repo/frontend/public/data.json
+    
+    cd /tmp/pulse-repo
     git config --global user.email "railway-bot@users.noreply.github.com"
     git config --global user.name "Railway Cron Bot"
-    
-    # Update the git origin to use the Personal Access Token for authentication
-    git remote set-url origin "https://${GITHUB_PAT}@github.com/iamarpit01/weekly-pulse-report.git"
     
     git add frontend/public/data.json
     

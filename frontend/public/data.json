@@ -2,39 +2,39 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "App Performance and Customer Support Issues",
+      "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Prioritize bug fixes and performance optimization to reduce glitches and improve user experience",
-        "Enhance customer support by providing timely and personalized responses to user queries and concerns",
-        "Simplify the IPO application process and ensure timely updates on IPO status and mandates"
+        "Optimize the app's login process to reduce errors and eliminate unnecessary steps such as selfie requirements when OTP is already provided",
+        "Improve the app's performance by addressing slow loading issues, particularly with charts and other graphics-intensive features",
+        "Enhance customer support by providing more effective and efficient solutions to user problems, potentially including more comprehensive training for customer care representatives"
       ],
       "verbatim_quotes": [
         {
-          "quote": "full of bugs update comes every day but still lagging",
+          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "The app is full of glitches lately.Unable to withdraw and add money during market crashes",
+          "quote": "very simple app.But but but major problem is their chart.Magnificently slow,it takes lots of time to load and sometimes just can't load.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "None of my last ten IPO applications were allotted. Not even a single IPO was allotted to me",
+          "quote": "worst app. can't even just login due to error. even try again didn't work. how we r supposed to use it when it's experience is very poor.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 0,
-      "review_count": 9
+      "cluster_id": 13,
+      "review_count": 19
     }
   ],
-  "total_reviews": 146,
+  "total_reviews": 145,
   "rating_distribution": {
-    "1": 45.89041095890411,
-    "2": 5.47945205479452,
-    "3": 8.904109589041095,
-    "4": 5.47945205479452,
-    "5": 34.24657534246575
+    "1": 46.206896551724135,
+    "2": 5.517241379310345,
+    "3": 8.275862068965518,
+    "4": 5.517241379310345,
+    "5": 34.48275862068966
   },
   "average_rating": 2.8,
-  "net_sentiment": -11.6,
+  "net_sentiment": -11.7,
   "ai_confidence": 90.7
 }

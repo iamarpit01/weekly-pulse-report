@@ -4,26 +4,22 @@
     {
       "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Optimize the app's login process to reduce errors and eliminate unnecessary steps like selfie verification when OTP is already provided",
-        "Improve the app's performance and speed, particularly with regards to loading charts and other features",
-        "Enhance customer support by providing more effective solutions and reducing the need for repetitive requests like screen-recorded videos"
+        "Simplify the login process by re-evaluating the necessity of selfies for authentication",
+        "Improve customer support by providing more effective and efficient issue resolution",
+        "Enhance the app's features by incorporating more time frames and technical indicators"
       ],
       "verbatim_quotes": [
         {
-          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
+          "quote": "worst app. can't even just login due to error. even try again didn't work.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "one of the very very very worst app.The customer care don't know any thing they ask for screen recorded video again again but they won't sort out the problem..",
+          "quote": "app is good but insert more candles of time frames like dhan, angel one.",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 10,
-      "review_count": 19
+      "cluster_id": 12,
+      "review_count": 12
     }
   ],
   "total_reviews": 145,

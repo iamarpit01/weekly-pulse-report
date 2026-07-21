@@ -4,22 +4,26 @@
     {
       "theme_name": "User Experience and App Performance",
       "actionable_ideas": [
-        "Simplify the login process by re-evaluating the necessity of selfies for authentication",
-        "Improve customer support by training representatives to efficiently resolve issues without requiring multiple follow-ups",
-        "Enhance the app's technical stability to prevent errors and improve overall user experience"
+        "Optimize the app's login process to reduce errors and eliminate unnecessary steps like selfie verification when OTP is already provided",
+        "Improve the app's performance and speed, particularly with regards to loading charts and other features",
+        "Enhance customer support by providing more effective solutions and reducing the need for repetitive requests like screen-recorded videos"
       ],
       "verbatim_quotes": [
         {
-          "quote": "worst app. can't even just login due to error. even try again didn't work.",
+          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "great UI and No account maintainance charges and user friendly App.",
+          "quote": "Amazing app! Clean interface, smooth performance, and easy investing experience.",
+          "author": "[REDACTED_USER]"
+        },
+        {
+          "quote": "one of the very very very worst app.The customer care don't know any thing they ask for screen recorded video again again but they won't sort out the problem..",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 12,
-      "review_count": 12
+      "cluster_id": 10,
+      "review_count": 19
     }
   ],
   "total_reviews": 145,

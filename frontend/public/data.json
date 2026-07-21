@@ -2,28 +2,24 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "User Experience and App Performance",
+      "theme_name": "Investment Experience and Features",
       "actionable_ideas": [
-        "Optimize the app's login process to reduce errors and eliminate unnecessary steps such as selfie requirements when OTP is already provided",
-        "Improve the app's performance by addressing slow loading issues, particularly with charts and other graphics-intensive features",
-        "Enhance customer support by providing more effective and efficient solutions to user problems, potentially including more comprehensive training for customer care representatives"
+        "Add technical analysis tools for stocks and trading to enhance user experience",
+        "Implement a feature to tag mutual funds with specific investment goals or purposes",
+        "Improve the withdrawal process for mutual funds to reduce processing time"
       ],
       "verbatim_quotes": [
         {
-          "quote": "the app is getting slower and slower day by day. just making the experience painful. time to switch.",
+          "quote": "Great App for Mutual Fund investment but not that great for Stocks and Trading as there are no technicals available.",
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "very simple app.But but but major problem is their chart.Magnificently slow,it takes lots of time to load and sometimes just can't load.",
-          "author": "[REDACTED_USER]"
-        },
-        {
-          "quote": "worst app. can't even just login due to error. even try again didn't work. how we r supposed to use it when it's experience is very poor.",
+          "quote": "It's good app with great UI/UX - one feature as a user i want and should be useful for others also that in the Mutual Fund section in the dashboard tab - Against all the MFs should be tagging/purpose/goal",
           "author": "[REDACTED_USER]"
         }
       ],
-      "cluster_id": 13,
-      "review_count": 19
+      "cluster_id": 6,
+      "review_count": 13
     }
   ],
   "total_reviews": 145,

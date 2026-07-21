@@ -4,9 +4,9 @@
     {
       "theme_name": "Investment Features and User Experience",
       "actionable_ideas": [
-        "Add technical analysis tools for stocks and trading to enhance user experience",
-        "Implement a feature to tag or categorize mutual funds by purpose or goal, such as SIP investments for specific life events",
-        "Improve the withdrawal process for mutual funds to reduce credit time into bank accounts"
+        "Provide technical analysis for stocks and trading to enhance user experience",
+        "Introduce a feature to tag mutual funds with specific investment goals or purposes",
+        "Improve the withdrawal process for mutual funds to reduce crediting time into bank accounts"
       ],
       "verbatim_quotes": [
         {
@@ -14,7 +14,7 @@
           "author": "[REDACTED_USER]"
         },
         {
-          "quote": "It's good app with great UI/UX - one feature as a user i want and should be useful for others also that in the Mutual Fund section in the dashboard tab - Against all the MFs should be tagging/purpose/goal",
+          "quote": "It's overall function is not good as others. withwral of some M.fund taking so much time to credit into the bank account.",
           "author": "[REDACTED_USER]"
         }
       ],

@@ -2,11 +2,11 @@
   "iso_week": "2026-W30",
   "summaries": [
     {
-      "theme_name": "Investment Experience and Features",
+      "theme_name": "Investment Features and User Experience",
       "actionable_ideas": [
         "Add technical analysis tools for stocks and trading to enhance user experience",
-        "Implement a feature to tag mutual funds with specific investment goals or purposes",
-        "Improve the withdrawal process for mutual funds to reduce processing time"
+        "Implement a feature to tag or categorize mutual funds by purpose or goal, such as SIP investments for specific life events",
+        "Improve the withdrawal process for mutual funds to reduce credit time into bank accounts"
       ],
       "verbatim_quotes": [
         {
